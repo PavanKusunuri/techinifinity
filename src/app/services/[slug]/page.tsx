@@ -30,12 +30,38 @@ const servicesData: Record<
       "Cloud security hardening",
       "Ongoing managed cloud operations",
     ],
-    technologies: ["AWS", "Azure", "Google Cloud", "Terraform", "Kubernetes", "Ansible"],
+    technologies: [
+      "AWS",
+      "Azure",
+      "Google Cloud",
+      "Terraform",
+      "Kubernetes",
+      "Ansible",
+    ],
     process: [
-      { step: "01", title: "Discover", description: "Assess your current infrastructure, applications, and business goals." },
-      { step: "02", title: "Design", description: "Architect a target-state cloud environment aligned to your requirements." },
-      { step: "03", title: "Migrate", description: "Execute a phased migration with minimal disruption to operations." },
-      { step: "04", title: "Optimise", description: "Continuously tune for performance, cost, and resilience." },
+      {
+        step: "01",
+        title: "Discover",
+        description:
+          "Assess your current infrastructure, applications, and business goals.",
+      },
+      {
+        step: "02",
+        title: "Design",
+        description:
+          "Architect a target-state cloud environment aligned to your requirements.",
+      },
+      {
+        step: "03",
+        title: "Migrate",
+        description:
+          "Execute a phased migration with minimal disruption to operations.",
+      },
+      {
+        step: "04",
+        title: "Optimise",
+        description: "Continuously tune for performance, cost, and resilience.",
+      },
     ],
   },
   cybersecurity: {
@@ -51,12 +77,37 @@ const servicesData: Record<
       "Incident response planning",
       "Compliance advisory (ISO 27001, SOC 2, GDPR)",
     ],
-    technologies: ["CrowdStrike", "Palo Alto", "Splunk", "Wiz", "Snyk", "HashiCorp Vault"],
+    technologies: [
+      "CrowdStrike",
+      "Palo Alto",
+      "Splunk",
+      "Wiz",
+      "Snyk",
+      "HashiCorp Vault",
+    ],
     process: [
-      { step: "01", title: "Assess", description: "Identify your current security posture and critical risks." },
-      { step: "02", title: "Prioritise", description: "Create a risk-ranked remediation roadmap." },
-      { step: "03", title: "Implement", description: "Deploy technical controls and process improvements." },
-      { step: "04", title: "Sustain", description: "Continuous monitoring, testing, and security awareness training." },
+      {
+        step: "01",
+        title: "Assess",
+        description:
+          "Identify your current security posture and critical risks.",
+      },
+      {
+        step: "02",
+        title: "Prioritise",
+        description: "Create a risk-ranked remediation roadmap.",
+      },
+      {
+        step: "03",
+        title: "Implement",
+        description: "Deploy technical controls and process improvements.",
+      },
+      {
+        step: "04",
+        title: "Sustain",
+        description:
+          "Continuous monitoring, testing, and security awareness training.",
+      },
     ],
   },
   devops: {
@@ -72,12 +123,35 @@ const servicesData: Record<
       "Observability stack setup",
       "Team training & enablement",
     ],
-    technologies: ["GitHub Actions", "Jenkins", "Docker", "Kubernetes", "Terraform", "Datadog"],
+    technologies: [
+      "GitHub Actions",
+      "Jenkins",
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "Datadog",
+    ],
     process: [
-      { step: "01", title: "Audit", description: "Map your current SDLC and identify bottlenecks." },
-      { step: "02", title: "Plan", description: "Design a target DevOps operating model." },
-      { step: "03", title: "Build", description: "Implement pipelines, containers, and IaC tooling." },
-      { step: "04", title: "Enable", description: "Train your team and hand over operational ownership." },
+      {
+        step: "01",
+        title: "Audit",
+        description: "Map your current SDLC and identify bottlenecks.",
+      },
+      {
+        step: "02",
+        title: "Plan",
+        description: "Design a target DevOps operating model.",
+      },
+      {
+        step: "03",
+        title: "Build",
+        description: "Implement pipelines, containers, and IaC tooling.",
+      },
+      {
+        step: "04",
+        title: "Enable",
+        description: "Train your team and hand over operational ownership.",
+      },
     ],
   },
   "data-analytics": {
@@ -93,12 +167,35 @@ const servicesData: Record<
       "Data quality & governance framework",
       "Real-time streaming analytics",
     ],
-    technologies: ["dbt", "Snowflake", "BigQuery", "Apache Spark", "Airflow", "Power BI"],
+    technologies: [
+      "dbt",
+      "Snowflake",
+      "BigQuery",
+      "Apache Spark",
+      "Airflow",
+      "Power BI",
+    ],
     process: [
-      { step: "01", title: "Discover", description: "Understand your data landscape and business questions." },
-      { step: "02", title: "Architect", description: "Design a scalable, governed data platform." },
-      { step: "03", title: "Build", description: "Implement pipelines, models, and dashboards." },
-      { step: "04", title: "Iterate", description: "Continuously expand coverage and analytical depth." },
+      {
+        step: "01",
+        title: "Discover",
+        description: "Understand your data landscape and business questions.",
+      },
+      {
+        step: "02",
+        title: "Architect",
+        description: "Design a scalable, governed data platform.",
+      },
+      {
+        step: "03",
+        title: "Build",
+        description: "Implement pipelines, models, and dashboards.",
+      },
+      {
+        step: "04",
+        title: "Iterate",
+        description: "Continuously expand coverage and analytical depth.",
+      },
     ],
   },
   "ai-ml": {
@@ -114,12 +211,35 @@ const servicesData: Record<
       "Computer vision systems",
       "AI ethics & governance consulting",
     ],
-    technologies: ["PyTorch", "TensorFlow", "Azure ML", "SageMaker", "OpenAI API", "Hugging Face"],
+    technologies: [
+      "PyTorch",
+      "TensorFlow",
+      "Azure ML",
+      "SageMaker",
+      "OpenAI API",
+      "Hugging Face",
+    ],
     process: [
-      { step: "01", title: "Identify", description: "Find the highest-value AI use cases in your business." },
-      { step: "02", title: "Experiment", description: "Rapidly prototype and validate models." },
-      { step: "03", title: "Deploy", description: "Ship production-ready models with monitoring." },
-      { step: "04", title: "Improve", description: "Continuously retrain and optimise model performance." },
+      {
+        step: "01",
+        title: "Identify",
+        description: "Find the highest-value AI use cases in your business.",
+      },
+      {
+        step: "02",
+        title: "Experiment",
+        description: "Rapidly prototype and validate models.",
+      },
+      {
+        step: "03",
+        title: "Deploy",
+        description: "Ship production-ready models with monitoring.",
+      },
+      {
+        step: "04",
+        title: "Improve",
+        description: "Continuously retrain and optimise model performance.",
+      },
     ],
   },
   "it-support": {
@@ -135,12 +255,184 @@ const servicesData: Record<
       "Vendor management",
       "Monthly reporting & QBRs",
     ],
-    technologies: ["ServiceNow", "PagerDuty", "Datadog", "Veeam", "Microsoft 365", "Jamf"],
+    technologies: [
+      "ServiceNow",
+      "PagerDuty",
+      "Datadog",
+      "Veeam",
+      "Microsoft 365",
+      "Jamf",
+    ],
     process: [
-      { step: "01", title: "Onboard", description: "Document your environment and establish monitoring baselines." },
-      { step: "02", title: "Stabilise", description: "Address immediate risks and improve operational hygiene." },
-      { step: "03", title: "Operate", description: "Deliver SLA-backed support and proactive maintenance." },
-      { step: "04", title: "Evolve", description: "Regular service reviews and continuous improvement." },
+      {
+        step: "01",
+        title: "Onboard",
+        description:
+          "Document your environment and establish monitoring baselines.",
+      },
+      {
+        step: "02",
+        title: "Stabilise",
+        description: "Address immediate risks and improve operational hygiene.",
+      },
+      {
+        step: "03",
+        title: "Operate",
+        description: "Deliver SLA-backed support and proactive maintenance.",
+      },
+      {
+        step: "04",
+        title: "Evolve",
+        description: "Regular service reviews and continuous improvement.",
+      },
+    ],
+  },
+  "mobile-applications": {
+    title: "Mobile Applications",
+    tagline: "Cross-platform iOS & Android apps users love.",
+    description:
+      "We design and build high-performance mobile apps using Flutter and React Native. From MVPs to enterprise-grade applications, we deliver smooth UI/UX, push notifications, offline support, and seamless API integration — published to the App Store and Google Play.",
+    deliverables: [
+      "App architecture & UI/UX design",
+      "Flutter / React Native development",
+      "Firebase & backend integration",
+      "Push notifications (FCM / APNs)",
+      "App Store & Play Console deployment",
+      "Crash monitoring & performance tuning",
+    ],
+    technologies: [
+      "Flutter",
+      "React Native",
+      "Firebase",
+      "Google Cloud",
+      "FCM",
+      "Crashlytics",
+      "REST/GraphQL",
+      "Git/GitHub",
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Discover",
+        description:
+          "Define user journeys, platforms, and technical requirements.",
+      },
+      {
+        step: "02",
+        title: "Design",
+        description:
+          "Wireframes, UI mockups, and prototype reviewed with stakeholders.",
+      },
+      {
+        step: "03",
+        title: "Build",
+        description:
+          "Iterative development with weekly demos and QA across devices.",
+      },
+      {
+        step: "04",
+        title: "Launch",
+        description:
+          "App Store & Play Console submission, monitoring, and post-launch support.",
+      },
+    ],
+  },
+  "web-applications": {
+    title: "Web Applications",
+    tagline: "Full-stack web apps built to scale with your business.",
+    description:
+      "From internal tools to customer-facing SaaS platforms, we build scalable web applications using React, Next.js, Node.js, and cloud-native backends. We cover the full stack — UI, APIs, databases, auth, and deployment — delivering fast, maintainable software your team can own.",
+    deliverables: [
+      "Requirements & system architecture",
+      "React / Next.js frontend development",
+      "Node.js / Python backend & REST APIs",
+      "Database design (PostgreSQL, MongoDB)",
+      "Authentication & authorisation",
+      "Cloud deployment & CI/CD pipeline",
+    ],
+    technologies: [
+      "React",
+      "Next.js",
+      "Node.js",
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "GitHub Actions",
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Scope",
+        description: "Define features, architecture, and delivery milestones.",
+      },
+      {
+        step: "02",
+        title: "Design",
+        description: "System design, data models, and UI/UX prototypes.",
+      },
+      {
+        step: "03",
+        title: "Build",
+        description:
+          "Agile sprints with continuous integration and stakeholder reviews.",
+      },
+      {
+        step: "04",
+        title: "Ship",
+        description:
+          "Production deployment, monitoring, and knowledge transfer.",
+      },
+    ],
+  },
+  websites: {
+    title: "Websites",
+    tagline: "Fast, beautiful, conversion-focused websites.",
+    description:
+      "We create responsive, SEO-optimised websites — corporate sites, landing pages, portfolios, and e-commerce storefronts. Built with Next.js and Tailwind CSS for top Lighthouse scores, fast load times, and a CMS your marketing team can actually use.",
+    deliverables: [
+      "Design & wireframing",
+      "Responsive Next.js / Tailwind build",
+      "SEO optimisation & meta strategy",
+      "CMS integration (Sanity, Contentful)",
+      "Performance & Core Web Vitals tuning",
+      "Hosting, domain & SSL setup",
+    ],
+    technologies: [
+      "Next.js",
+      "Tailwind CSS",
+      "Sanity",
+      "Contentful",
+      "Vercel",
+      "Cloudflare",
+      "TypeScript",
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Brief",
+        description:
+          "Understand brand, goals, target audience, and content structure.",
+      },
+      {
+        step: "02",
+        title: "Design",
+        description:
+          "Figma designs reviewed and approved before development begins.",
+      },
+      {
+        step: "03",
+        title: "Build",
+        description: "Pixel-perfect responsive development with CMS wiring.",
+      },
+      {
+        step: "04",
+        title: "Launch",
+        description:
+          "Performance audit, SEO checks, and go-live on your domain.",
+      },
     ],
   },
 };

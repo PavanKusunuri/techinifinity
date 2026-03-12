@@ -2,7 +2,18 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Cloud, Shield, GitBranch, BarChart3, Brain, Headphones, ArrowRight } from "lucide-react";
+import {
+  Cloud,
+  Shield,
+  GitBranch,
+  BarChart3,
+  Brain,
+  Headphones,
+  Smartphone,
+  Globe,
+  Layout,
+  ArrowRight,
+} from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card, CardContent } from "@/components/ui/Card";
 
@@ -60,6 +71,33 @@ const services = [
     slug: "it-support",
     color: "text-blue-500",
     bg: "bg-blue-50 dark:bg-blue-950",
+  },
+  {
+    icon: Smartphone,
+    title: "Mobile Applications",
+    description:
+      "Cross-platform iOS and Android apps built with Flutter and React Native — performant, beautiful, and production-ready.",
+    slug: "mobile-applications",
+    color: "text-pink-500",
+    bg: "bg-pink-50 dark:bg-pink-950",
+  },
+  {
+    icon: Globe,
+    title: "Web Applications",
+    description:
+      "Scalable full-stack web applications using React, Next.js, Node.js, and modern cloud infrastructure tailored to your business logic.",
+    slug: "web-applications",
+    color: "text-teal-500",
+    bg: "bg-teal-50 dark:bg-teal-950",
+  },
+  {
+    icon: Layout,
+    title: "Websites",
+    description:
+      "Fast, SEO-optimised, responsive websites — from marketing landing pages to multi-page corporate sites that convert visitors into clients.",
+    slug: "websites",
+    color: "text-indigo-500",
+    bg: "bg-indigo-50 dark:bg-indigo-950",
   },
 ];
 

@@ -1,6 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Cloud, Shield, GitBranch, BarChart3, Brain, Headphones } from "lucide-react";
+import {
+  ArrowRight,
+  Cloud,
+  Shield,
+  GitBranch,
+  BarChart3,
+  Brain,
+  Headphones,
+  Smartphone,
+  Globe,
+  Layout,
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/Card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CTA } from "@/components/sections/CTA";
@@ -8,7 +19,7 @@ import { CTA } from "@/components/sections/CTA";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore Techinifity's full range of IT services: cloud solutions, cybersecurity, DevOps, data analytics, AI/ML, and managed IT support.",
+    "Explore Techinifity's full range of IT services: cloud solutions, cybersecurity, DevOps, data analytics, AI/ML, managed IT support, mobile apps, web applications, and websites.",
 };
 
 const services = [
@@ -19,7 +30,13 @@ const services = [
     tagline: "Migrate, modernise, and optimise your cloud infrastructure.",
     description:
       "We design and implement secure, scalable cloud architectures across AWS, Azure, and GCP. From lift-and-shift migrations to cloud-native rebuilds, we handle the full lifecycle.",
-    deliverables: ["Cloud readiness assessment", "Architecture design & PoC", "Migration execution", "Cost optimisation", "24/7 cloud monitoring"],
+    deliverables: [
+      "Cloud readiness assessment",
+      "Architecture design & PoC",
+      "Migration execution",
+      "Cost optimisation",
+      "24/7 cloud monitoring",
+    ],
     color: "text-sky-500",
     bg: "bg-sky-50 dark:bg-sky-950",
   },
@@ -30,7 +47,13 @@ const services = [
     tagline: "Protect your business from evolving cyber threats.",
     description:
       "Our certified security professionals conduct comprehensive audits, implement zero-trust frameworks, and provide ongoing threat intelligence to keep your assets safe.",
-    deliverables: ["Security risk assessment", "Penetration testing", "Zero-trust implementation", "SOC setup & monitoring", "Compliance (ISO 27001, SOC 2)"],
+    deliverables: [
+      "Security risk assessment",
+      "Penetration testing",
+      "Zero-trust implementation",
+      "SOC setup & monitoring",
+      "Compliance (ISO 27001, SOC 2)",
+    ],
     color: "text-red-500",
     bg: "bg-red-50 dark:bg-red-950",
   },
@@ -41,7 +64,13 @@ const services = [
     tagline: "Ship faster and more reliably with automated pipelines.",
     description:
       "We transform your development workflows with Docker, Kubernetes, Terraform, and modern CI/CD platforms — reducing release cycles and improving deployment confidence.",
-    deliverables: ["DevOps maturity assessment", "CI/CD pipeline design", "Container orchestration", "Infrastructure-as-code", "Observability & alerting"],
+    deliverables: [
+      "DevOps maturity assessment",
+      "CI/CD pipeline design",
+      "Container orchestration",
+      "Infrastructure-as-code",
+      "Observability & alerting",
+    ],
     color: "text-green-500",
     bg: "bg-green-50 dark:bg-green-950",
   },
@@ -52,7 +81,13 @@ const services = [
     tagline: "Turn raw data into actionable business intelligence.",
     description:
       "From data warehouse design to real-time dashboards, we build the data infrastructure that helps your team make faster, smarter decisions.",
-    deliverables: ["Data strategy consulting", "Data warehouse & lakehouse", "ETL pipeline engineering", "BI dashboards (PowerBI, Tableau)", "Data governance framework"],
+    deliverables: [
+      "Data strategy consulting",
+      "Data warehouse & lakehouse",
+      "ETL pipeline engineering",
+      "BI dashboards (PowerBI, Tableau)",
+      "Data governance framework",
+    ],
     color: "text-purple-500",
     bg: "bg-purple-50 dark:bg-purple-950",
   },
@@ -63,7 +98,13 @@ const services = [
     tagline: "Unlock competitive advantage with intelligent systems.",
     description:
       "We develop custom ML models, NLP pipelines, computer vision systems, and AI-augmented workflows that create measurable value for your business.",
-    deliverables: ["AI opportunity assessment", "Custom ML model development", "MLOps & model deployment", "NLP & computer vision", "LLM integration & fine-tuning"],
+    deliverables: [
+      "AI opportunity assessment",
+      "Custom ML model development",
+      "MLOps & model deployment",
+      "NLP & computer vision",
+      "LLM integration & fine-tuning",
+    ],
     color: "text-orange-500",
     bg: "bg-orange-50 dark:bg-orange-950",
   },
@@ -74,9 +115,69 @@ const services = [
     tagline: "Proactive IT management so you can focus on your business.",
     description:
       "Our managed services team provides 24/7 monitoring, helpdesk support, patch management, and infrastructure maintenance under agreed SLAs.",
-    deliverables: ["24/7 NOC monitoring", "Tier 1-3 helpdesk support", "Patch & update management", "Disaster recovery planning", "Monthly IT health reports"],
+    deliverables: [
+      "24/7 NOC monitoring",
+      "Tier 1-3 helpdesk support",
+      "Patch & update management",
+      "Disaster recovery planning",
+      "Monthly IT health reports",
+    ],
     color: "text-blue-500",
     bg: "bg-blue-50 dark:bg-blue-950",
+  },
+  {
+    icon: Smartphone,
+    slug: "mobile-applications",
+    title: "Mobile Applications",
+    tagline: "Cross-platform iOS & Android apps users love.",
+    description:
+      "We design and build high-performance mobile apps using Flutter and React Native. From MVPs to enterprise-grade applications, we deliver smooth UI/UX, push notifications, offline support, and seamless API integration — shipped to the App Store and Google Play.",
+    deliverables: [
+      "App architecture & UI/UX design",
+      "Flutter / React Native development",
+      "Firebase & backend integration",
+      "Push notifications (FCM/APNs)",
+      "App Store & Play Console deployment",
+      "Crash monitoring & performance tuning",
+    ],
+    color: "text-pink-500",
+    bg: "bg-pink-50 dark:bg-pink-950",
+  },
+  {
+    icon: Globe,
+    slug: "web-applications",
+    title: "Web Applications",
+    tagline: "Full-stack web apps built to scale with your business.",
+    description:
+      "From internal tools to customer-facing SaaS platforms, we build scalable web applications using React, Next.js, Node.js, and cloud-native backends. We cover the full stack — UI, APIs, databases, auth, and deployment.",
+    deliverables: [
+      "Requirements & system architecture",
+      "React / Next.js frontend development",
+      "Node.js / Python backend & REST APIs",
+      "Database design (PostgreSQL, MongoDB)",
+      "Authentication & authorisation",
+      "Cloud deployment & CI/CD",
+    ],
+    color: "text-teal-500",
+    bg: "bg-teal-50 dark:bg-teal-950",
+  },
+  {
+    icon: Layout,
+    slug: "websites",
+    title: "Websites",
+    tagline: "Fast, beautiful, conversion-focused websites.",
+    description:
+      "We create responsive, SEO-optimised websites — corporate sites, landing pages, portfolios, and e-commerce storefronts. Built with Next.js and Tailwind CSS for top Lighthouse scores, fast load times, and a content management system your team can actually use.",
+    deliverables: [
+      "Design & wireframing",
+      "Responsive Next.js / Tailwind build",
+      "SEO optimisation & meta strategy",
+      "CMS integration (Sanity, Contentful)",
+      "Performance & Core Web Vitals tuning",
+      "Hosting & domain setup",
+    ],
+    color: "text-indigo-500",
+    bg: "bg-indigo-50 dark:bg-indigo-950",
   },
 ];
 

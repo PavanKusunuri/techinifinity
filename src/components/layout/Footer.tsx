@@ -3,6 +3,9 @@ import { Zap, Linkedin, Twitter, Github, Mail, Phone, MapPin } from "lucide-reac
 
 const footerLinks = {
   Services: [
+    { href: "/services/mobile-applications", label: "Mobile Applications" },
+    { href: "/services/web-applications", label: "Web Applications" },
+    { href: "/services/websites", label: "Websites" },
     { href: "/services/cloud-solutions", label: "Cloud Solutions" },
     { href: "/services/cybersecurity", label: "Cybersecurity" },
     { href: "/services/devops", label: "DevOps & CI/CD" },
