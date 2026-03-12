@@ -3,6 +3,10 @@ import { Zap, Linkedin, Twitter, Github, Mail, Phone, MapPin } from "lucide-reac
 
 const footerLinks = {
   Services: [
+    {
+      href: "/services/sharepoint-power-platform",
+      label: "SharePoint & Power Platform",
+    },
     { href: "/services/mobile-applications", label: "Mobile Applications" },
     { href: "/services/web-applications", label: "Web Applications" },
     { href: "/services/websites", label: "Websites" },

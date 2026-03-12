@@ -435,6 +435,58 @@ const servicesData: Record<
       },
     ],
   },
+  "sharepoint-power-platform": {
+    title: "SharePoint & Power Platform",
+    tagline: "Unlock the full power of your Microsoft 365 investment.",
+    description:
+      "We design, build, and administer SharePoint Online portals, intranets, and document management systems — and extend them with Power Apps and Power Automate workflows that eliminate manual processes and bring your organisation closer together.",
+    deliverables: [
+      "SharePoint Online site design & custom branding",
+      "Intranet portals & document libraries",
+      "SharePoint Server & OOTB solutions",
+      "Power Apps (Canvas & Model-driven apps)",
+      "Power Automate workflow automation",
+      "SharePoint administration & governance",
+      "SQL Server & Azure integration",
+      "Microsoft 365 tenant management",
+    ],
+    technologies: [
+      "SharePoint Online",
+      "Power Apps",
+      "Power Automate",
+      "Microsoft Azure",
+      "SQL Server",
+      "Microsoft 365",
+      "JavaScript",
+      "HTML/CSS",
+    ],
+    process: [
+      {
+        step: "01",
+        title: "Assess",
+        description:
+          "Audit your current Microsoft 365 environment and identify collaboration gaps.",
+      },
+      {
+        step: "02",
+        title: "Design",
+        description:
+          "Architect SharePoint sites, data models, and Power Platform solutions.",
+      },
+      {
+        step: "03",
+        title: "Build",
+        description:
+          "Develop and configure portals, apps, and automated workflows.",
+      },
+      {
+        step: "04",
+        title: "Adopt",
+        description:
+          "User training, governance setup, and ongoing platform administration.",
+      },
+    ],
+  },
 };
 
 export async function generateStaticParams() {

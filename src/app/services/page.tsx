@@ -11,6 +11,7 @@ import {
   Smartphone,
   Globe,
   Layout,
+  Share2,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/Card";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -178,6 +179,24 @@ const services = [
     ],
     color: "text-indigo-500",
     bg: "bg-indigo-50 dark:bg-indigo-950",
+  },
+  {
+    icon: Share2,
+    slug: "sharepoint-power-platform",
+    title: "SharePoint & Power Platform",
+    tagline: "Unlock the full power of your Microsoft 365 investment.",
+    description:
+      "We design, build, and administer SharePoint Online portals, intranets, and document management systems — and extend them with Power Apps and Power Automate workflows that eliminate manual processes and connect your organisation.",
+    deliverables: [
+      "SharePoint Online site design & branding",
+      "Intranet & document management portals",
+      "Power Apps (Canvas & Model-driven)",
+      "Power Automate workflow automation",
+      "SharePoint administration & governance",
+      "Microsoft 365 & Azure integration",
+    ],
+    color: "text-cyan-500",
+    bg: "bg-cyan-50 dark:bg-cyan-950",
   },
 ];
 

@@ -12,6 +12,7 @@ import {
   Smartphone,
   Globe,
   Layout,
+  Share2,
   ArrowRight,
 } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -98,6 +99,15 @@ const services = [
     slug: "websites",
     color: "text-indigo-500",
     bg: "bg-indigo-50 dark:bg-indigo-950",
+  },
+  {
+    icon: Share2,
+    title: "SharePoint & Power Platform",
+    description:
+      "SharePoint Online portals, intranet solutions, Power Apps, and Power Automate workflows that supercharge Microsoft 365 collaboration.",
+    slug: "sharepoint-power-platform",
+    color: "text-cyan-500",
+    bg: "bg-cyan-50 dark:bg-cyan-950",
   },
 ];
 
