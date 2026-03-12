@@ -95,42 +95,6 @@ const team = [
       "iOS",
     ],
   },
-  {
-    name: "Alex Rivera",
-    role: "CEO & Founder",
-    bio: "15+ years in enterprise IT strategy and digital transformation.",
-    avatar: "AR",
-  },
-  {
-    name: "Priya Sharma",
-    role: "CTO",
-    bio: "Cloud architecture expert with deep AWS and Azure certifications.",
-    avatar: "PS",
-  },
-  {
-    name: "James O'Brien",
-    role: "Head of Cybersecurity",
-    bio: "Former cybersecurity lead at a Fortune 500 financial institution.",
-    avatar: "JO",
-  },
-  {
-    name: "Mei Lin",
-    role: "Head of AI & Data",
-    bio: "PhD in ML, specialises in enterprise AI integration and MLOps.",
-    avatar: "ML",
-  },
-  {
-    name: "Carlos Mendez",
-    role: "DevOps Lead",
-    bio: "Kubernetes and GitOps specialist with 10 years of pipeline automation.",
-    avatar: "CM",
-  },
-  {
-    name: "Fatima Al-Hassan",
-    role: "Client Success Director",
-    bio: "Ensures every client relationship delivers measurable business value.",
-    avatar: "FA",
-  },
 ];
 
 const values = [
