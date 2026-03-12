@@ -1,0 +1,51 @@
+---
+title: "Zero-Trust Security Transformation for HealthBridge"
+date: "2025-09-01"
+excerpt: "HealthBridge, a healthcare technology company handling PHI data for 2 million patients, partnered with us to implement a zero-trust security architecture, achieve HIPAA compliance, and reduce their attack surface by 80%."
+client: "HealthBridge"
+industry: "Healthcare"
+category: "Cybersecurity"
+tags: ["Zero-Trust", "HIPAA", "Compliance", "Security"]
+author: "Techinifity Team"
+coverImage: "/og/default.png"
+---
+
+## Background
+
+HealthBridge stores and processes Protected Health Information (PHI) for over 2 million patients across 300 hospitals. A penetration test commissioned prior to our engagement revealed 23 critical vulnerabilities, 7 of which could have resulted in a full data breach.
+
+## Challenge
+
+- Legacy VPN-based perimeter security with implicit trust
+- No multi-factor authentication on 40% of internal systems
+- Unencrypted PHI in backup storage
+- No centralised logging or SIEM in place
+- 18 months away from a mandatory HITRUST certification audit
+
+## Our Solution
+
+### Security Assessment (Weeks 1-2)
+Conducted a comprehensive risk assessment including internal and external penetration testing, code security review, and cloud configuration audit.
+
+### Zero-Trust Architecture Design (Weeks 3-4)
+Designed an identity-centric, zero-trust architecture using:
+- **Okta** for identity provider and MFA
+- **Zscaler** for zero-trust network access (ZTNA)
+- **CrowdStrike Falcon** for endpoint detection & response
+
+### Implementation (Weeks 5-14)
+1. Deployed MFA across 100% of systems
+2. Replaced VPN with ZTNA for all remote access
+3. Encrypted all data at rest using AWS KMS
+4. Stood up Splunk SIEM with 200+ detection rules
+5. Implemented privileged access management (PAM)
+
+## Results
+
+- **80% reduction** in attack surface measured by external scan
+- **100% MFA coverage** across all systems
+- **Zero critical findings** in follow-up penetration test
+- **HITRUST CSF certification** achieved within 14 months
+- PHI breach risk reduced from High to **Low**
+
+> "The Techinifity team's threat expertise and structured approach gave us the confidence to face our HITRUST audit. They didn't just fix problems — they built us a world-class security programme." — Michael Chen, VP Engineering

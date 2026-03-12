@@ -1,0 +1,53 @@
+---
+title: "The IT Leader's Guide to Cloud Cost Optimisation in 2026"
+date: "2026-02-20"
+excerpt: "Cloud bills continue to shock organisations even after migration. Here are the 8 proven strategies our consultants use to cut cloud spend by 30-50% without sacrificing performance."
+tags: ["Cloud", "FinOps", "AWS", "Cost Optimisation"]
+author: "Priya Sharma"
+category: "Cloud"
+coverImage: "/og/default.png"
+---
+
+Cloud adoption has accelerated dramatically, but so have cloud bills. In our experience, most organisations are overspending on cloud by **30-50%** — not because cloud is expensive, but because default configurations favour availability over cost.
+
+Here are the eight strategies we apply for every client.
+
+## 1. Right-Size Your Instances
+
+The single biggest source of waste. AWS, Azure, and GCP all provide right-sizing recommendations — but acting on them requires organisational discipline. Start with a 30-day utilisation analysis. Anything consistently below 20% CPU utilisation is a candidate for downsizing.
+
+**Quick win:** Enable CloudWatch metrics, sort by average CPU, identify your 20 most underutilised instances.
+
+## 2. Migrate to Reserved or Committed Use Pricing
+
+On-demand pricing is 2-3x more expensive than 1-year reserved pricing for stable, predictable workloads. For baseline compute, the case for reserved instances is almost always compelling.
+
+> **Rule of thumb:** If a resource has been running for 3+ months with consistent utilisation, purchase a 1-year reserved instance.
+
+## 3. Schedule Non-Production Environments
+
+Development, staging, and QA environments don't need to run 24/7. Implement automated start/stop schedules to shut them down outside business hours and over weekends. This alone typically saves 65% on non-production compute.
+
+## 4. Implement Storage Lifecycle Policies
+
+S3 and Azure Blob storage costs compound over time. Objects not accessed in 90 days should automatically transition to Infrequent Access, and objects older than 180 days should move to Glacier (or equivalent).
+
+## 5. Review Data Transfer Costs
+
+Egress costs are the hidden killer. Ensure you're not transferring data across availability zones unnecessarily, and evaluate CDN usage for customer-facing assets.
+
+## 6. Adopt Spot / Preemptible Instances
+
+For fault-tolerant workloads (batch processing, ML training, CI/CD runners), Spot Instances can be up to **90% cheaper** than on-demand. The key is designing your workloads to handle interruption gracefully.
+
+## 7. Tag Everything and Use Cost Allocation Reports
+
+You cannot optimise what you cannot measure. Implement mandatory tagging policies for environment, team, and project. Enable detailed cost allocation reports and build department-level dashboards.
+
+## 8. Implement a FinOps Practice
+
+FinOps is the cultural shift that makes the above sustainable. Assign cloud cost ownership to engineering teams, create shared visibility, and review costs in every sprint retrospective.
+
+---
+
+If you'd like a complimentary cloud cost review for your environment, [get in touch with our team](/contact).

@@ -1,0 +1,55 @@
+---
+title: "How We Moved FinanceCore to AWS — Cutting Costs by 40%"
+date: "2025-11-15"
+excerpt: "FinanceCore, a mid-sized payment processing company, needed to escape expensive on-prem infrastructure. We designed and executed a phased AWS migration over 12 weeks, achieving 40% cost reduction and 99.99% uptime."
+client: "FinanceCore Inc."
+industry: "Financial Services"
+category: "Cloud Migration"
+tags: ["AWS", "Cloud", "Cost Optimisation", "Migration"]
+author: "Techinifity Team"
+coverImage: "/og/default.png"
+---
+
+## The Challenge
+
+FinanceCore was running a sprawling on-premises data centre that required costly hardware refresh cycles every three years. With aging infrastructure, the engineering team spent 60% of their time on maintenance rather than innovation.
+
+Their pain points:
+- **$2.4M annual hardware & hosting costs**
+- Lengthy provisioning times (4-6 weeks for new environments)
+- Increasing compliance burden on self-managed infrastructure
+- Limited disaster recovery capabilities
+
+## Our Approach
+
+We started with a 2-week discovery phase to catalogue all 47 workloads, assess their cloud-readiness, and produce a detailed Total Cost of Ownership (TCO) analysis.
+
+### Phase 1: Foundation (Weeks 1-3)
+Set up AWS Landing Zone, identity federation, and network architecture using a hub-and-spoke VPC design.
+
+### Phase 2: Pilot Migration (Weeks 4-7)
+Migrated three non-critical workloads using the lift-and-shift approach to validate tooling and runbooks.
+
+### Phase 3: Production Migration (Weeks 8-12)
+Executed the remaining 44 workloads using a combination of:
+- **Rehost** (lift & shift with CloudEndure) for legacy apps
+- **Replatform** (RDS, ECS) for database and containerisable services
+- **Refactor** (Lambda, API Gateway) for three customer-facing APIs
+
+## The Results
+
+| Metric | Before | After |
+|--------|--------|-------|
+| Annual Infrastructure Cost | $2.4M | $1.44M |
+| Provisioning Time | 4-6 weeks | 15 minutes |
+| Uptime | 99.5% | 99.99% |
+| Recovery Time Objective | 48 hours | 2 hours |
+
+> "Techinifity delivered on every commitment — on time, on budget, and with zero production incidents during migration. The savings speak for themselves." — Sarah Johnson, CTO
+
+## Key Technologies
+
+- AWS EC2, RDS, ECS, Lambda, CloudFront
+- Terraform for infrastructure-as-code
+- AWS CloudEndure for server migration
+- AWS Control Tower for governance

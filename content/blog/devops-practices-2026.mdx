@@ -1,0 +1,65 @@
+---
+title: "DevOps in 2026: The Five Practices That Actually Move the Needle"
+date: "2026-01-10"
+excerpt: "After delivering 40+ DevOps transformations, we've distilled the practices that consistently drive deployment frequency up and change failure rate down — and the ones that don't."
+tags: ["DevOps", "CI/CD", "Kubernetes", "Platform Engineering"]
+author: "Carlos Mendez"
+category: "DevOps"
+coverImage: "/og/default.png"
+---
+
+The DevOps landscape has matured significantly. The DORA metrics — deployment frequency, lead time, change failure rate, and mean time to recovery — are now widely understood. But understanding them and improving them are different things.
+
+Here are the five practices that consistently move those metrics in the right direction.
+
+## 1. Trunk-Based Development Over Long-Lived Branches
+
+Long-lived feature branches are the enemy of fast delivery. They delay integration, accumulate merge conflicts, and push risk to the end of the cycle. Teams that adopt trunk-based development — committing to main at least daily — consistently achieve higher deployment frequency and lower change failure rates.
+
+**How to get there:** Start with short-lived feature branches (max 2 days), pair with feature flags to safely ship incomplete features, and invest in a solid test suite so committing frequently feels safe.
+
+## 2. Shift-Left Testing
+
+Testing at the end of the pipeline is too late. Every test that can run earlier — unit, integration, security scanning, contract tests — should run earlier. At Techinifity, we use a tiered approach:
+
+- **Tier 1 (< 5 min):** Unit tests, linting, SAST — runs on every commit
+- **Tier 2 (< 15 min):** Integration tests, dependency checks — runs on pull request
+- **Tier 3 (< 45 min):** E2E tests, performance tests — runs before deployment
+
+## 3. Treat Infrastructure as Code from Day One
+
+Every manual infrastructure change is technical debt. Teams that adopt Terraform, Pulumi, or AWS CDK consistently have lower drift, faster disaster recovery, and more reliable environments.
+
+```hcl
+# Example: Enforcing tagging compliance in Terraform
+resource "aws_instance" "app" {
+  ami           = var.ami_id
+  instance_type = var.instance_type
+
+  tags = {
+    Environment = var.environment
+    Team        = var.team
+    Project     = var.project_name
+  }
+}
+```
+
+## 4. Invest in Developer Experience (DX)
+
+Platform engineering teams that abstract infrastructure complexity and provide self-service golden paths see dramatically higher developer productivity. A great internal developer platform means developers spend time writing business logic, not Kubernetes YAML.
+
+Minimum viable DX improvements:
+- One-command local environment setup
+- Self-service environment provisioning
+- Standardised CI/CD templates
+- Centralised secrets management
+
+## 5. Measure DORA Metrics Weekly
+
+What gets measured gets improved. Set up automated DORA dashboards using your CI/CD and incident management data. Review them in your engineering all-hands. Make them visible to leadership.
+
+The teams we've worked with that improved their DORA metrics the most had one thing in common: **they cared about the numbers and reviewed them regularly**.
+
+---
+
+Interested in a DevOps maturity assessment for your team? [Book a free consultation](/contact).
