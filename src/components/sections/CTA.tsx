@@ -26,8 +26,9 @@ export function CTA() {
               Ready to Transform Your IT?
             </h2>
             <p className="text-blue-100 text-lg max-w-2xl mx-auto mb-10">
-              Book a free 30-minute consultation with one of our senior consultants. No sales
-              pitch — just honest advice tailored to your business challenges.
+              Book a free 30-minute consultation with one of our senior
+              consultants. No sales pitch — just honest advice tailored to your
+              business challenges.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="w-full sm:w-auto">
