@@ -55,10 +55,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-xl text-[var(--color-muted-foreground)] max-w-3xl mx-auto mb-10 leading-relaxed"
+          className="text-base sm:text-xl text-[var(--color-muted-foreground)] max-w-3xl mx-auto mb-10 leading-relaxed"
         >
-          Techinifity delivers end-to-end IT consulting — from cloud migration and cybersecurity
-          to AI-driven analytics. We help you stay ahead in a fast-evolving digital landscape.
+          Techinifity delivers end-to-end IT consulting — from cloud migration
+          and cybersecurity to AI-driven analytics. We help you stay ahead in a
+          fast-evolving digital landscape.
         </motion.p>
 
         <motion.div
@@ -67,13 +68,13 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex flex-col sm:flex-row gap-4 justify-center mb-14"
         >
-          <Link href="/contact">
-            <Button size="lg" className="gap-2">
+          <Link href="/contact" className="w-full sm:w-auto">
+            <Button size="lg" className="gap-2 w-full sm:w-auto">
               Book Free Consultation <ArrowRight className="w-5 h-5" />
             </Button>
           </Link>
-          <Link href="/case-studies">
-            <Button size="lg" variant="outline">
+          <Link href="/case-studies" className="w-full sm:w-auto">
+            <Button size="lg" variant="outline" className="w-full sm:w-auto">
               View Our Work
             </Button>
           </Link>
@@ -86,7 +87,10 @@ export function Hero() {
           className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center"
         >
           {highlights.map((h) => (
-            <div key={h} className="flex items-center gap-2 text-sm text-[var(--color-muted-foreground)]">
+            <div
+              key={h}
+              className="flex items-center gap-2 text-sm text-[var(--color-muted-foreground)]"
+            >
               <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
               {h}
             </div>

@@ -32,7 +32,10 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
   }, [inView, target]);
 
   return (
-    <span ref={ref} className="text-4xl md:text-5xl font-bold text-white">
+    <span
+      ref={ref}
+      className="text-3xl sm:text-4xl md:text-5xl font-bold text-white"
+    >
       {count}
       {suffix}
     </span>

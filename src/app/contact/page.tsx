@@ -70,12 +70,12 @@ export default function ContactPage() {
           <span className="inline-block text-blue-600 dark:text-blue-400 text-sm font-semibold uppercase tracking-widest mb-3">
             Get In Touch
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-foreground)] mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--color-foreground)] mb-6">
             Let&apos;s Start a Conversation
           </h1>
-          <p className="text-xl text-[var(--color-muted-foreground)] max-w-3xl mx-auto leading-relaxed">
-            Whether you have a project in mind or just want to explore how Techinifity can help,
-            we&apos;d love to hear from you.
+          <p className="text-base sm:text-xl text-[var(--color-muted-foreground)] max-w-3xl mx-auto leading-relaxed">
+            Whether you have a project in mind or just want to explore how
+            Techinifity can help, we&apos;d love to hear from you.
           </p>
         </div>
       </section>
@@ -133,8 +133,8 @@ export default function ContactPage() {
                     Message Sent!
                   </h3>
                   <p className="text-[var(--color-muted-foreground)] max-w-sm">
-                    Thank you for reaching out. A member of our team will be in touch within 2
-                    business hours.
+                    Thank you for reaching out. A member of our team will be in
+                    touch within 2 business hours.
                   </p>
                   <Button variant="outline" onClick={() => setSubmitted(false)}>
                     Send Another Message
@@ -150,7 +150,10 @@ export default function ContactPage() {
                         className={inputClass(!!errors.name)}
                       />
                     </Field>
-                    <Field label="Email Address *" error={errors.email?.message}>
+                    <Field
+                      label="Email Address *"
+                      error={errors.email?.message}
+                    >
                       <input
                         {...register("email")}
                         type="email"
@@ -168,7 +171,10 @@ export default function ContactPage() {
                       />
                     </Field>
                     <Field label="Service of Interest">
-                      <select {...register("service")} className={inputClass(false)}>
+                      <select
+                        {...register("service")}
+                        className={inputClass(false)}
+                      >
                         <option value="">Select a service…</option>
                         {services.map((s) => (
                           <option key={s} value={s}>
@@ -186,8 +192,19 @@ export default function ContactPage() {
                       className={inputClass(!!errors.message)}
                     />
                   </Field>
-                  <Button type="submit" size="lg" disabled={loading} className="gap-2 w-full sm:w-auto">
-                    {loading ? "Sending…" : <>Send Message <Send className="w-4 h-4" /></>}
+                  <Button
+                    type="submit"
+                    size="lg"
+                    disabled={loading}
+                    className="gap-2 w-full sm:w-auto"
+                  >
+                    {loading ? (
+                      "Sending…"
+                    ) : (
+                      <>
+                        Send Message <Send className="w-4 h-4" />
+                      </>
+                    )}
                   </Button>
                 </form>
               )}

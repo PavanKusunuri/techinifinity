@@ -208,31 +208,41 @@ export default function ServicesPage() {
           <span className="inline-block text-blue-600 dark:text-blue-400 text-sm font-semibold uppercase tracking-widest mb-3">
             What We Offer
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-foreground)] mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--color-foreground)] mb-6">
             End-to-End IT Services
           </h1>
-          <p className="text-xl text-[var(--color-muted-foreground)] max-w-3xl mx-auto leading-relaxed">
-            Six core service areas, each staffed by certified specialists with deep
-            domain expertise and a track record of delivery.
+          <p className="text-base sm:text-xl text-[var(--color-muted-foreground)] max-w-3xl mx-auto leading-relaxed">
+            Six core service areas, each staffed by certified specialists with
+            deep domain expertise and a track record of delivery.
           </p>
         </div>
       </section>
 
       <section className="py-20 bg-[var(--color-background)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {services.map((service) => {
               const Icon = service.icon;
               return (
-                <Card key={service.slug} hover className="group overflow-hidden">
+                <Card
+                  key={service.slug}
+                  hover
+                  className="group overflow-hidden"
+                >
                   <CardContent className="flex flex-col gap-4 p-8">
                     <div className="flex items-start gap-4">
-                      <div className={`w-14 h-14 rounded-xl ${service.bg} flex items-center justify-center shrink-0`}>
+                      <div
+                        className={`w-14 h-14 rounded-xl ${service.bg} flex items-center justify-center shrink-0`}
+                      >
                         <Icon className={`w-7 h-7 ${service.color}`} />
                       </div>
                       <div>
-                        <h2 className="text-xl font-bold text-[var(--color-foreground)]">{service.title}</h2>
-                        <p className={`text-sm font-medium ${service.color}`}>{service.tagline}</p>
+                        <h2 className="text-xl font-bold text-[var(--color-foreground)]">
+                          {service.title}
+                        </h2>
+                        <p className={`text-sm font-medium ${service.color}`}>
+                          {service.tagline}
+                        </p>
                       </div>
                     </div>
                     <p className="text-[var(--color-muted-foreground)] text-sm leading-relaxed">
@@ -240,7 +250,10 @@ export default function ServicesPage() {
                     </p>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                       {service.deliverables.map((d) => (
-                        <li key={d} className="flex items-center gap-2 text-xs text-[var(--color-muted-foreground)]">
+                        <li
+                          key={d}
+                          className="flex items-center gap-2 text-xs text-[var(--color-muted-foreground)]"
+                        >
                           <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
                           {d}
                         </li>

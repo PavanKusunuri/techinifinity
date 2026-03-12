@@ -24,12 +24,12 @@ export default function CaseStudiesPage() {
           <span className="inline-block text-blue-600 dark:text-blue-400 text-sm font-semibold uppercase tracking-widest mb-3">
             Our Work
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-foreground)] mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--color-foreground)] mb-6">
             Client Case Studies
           </h1>
-          <p className="text-xl text-[var(--color-muted-foreground)] max-w-3xl mx-auto leading-relaxed">
-            Real projects, real outcomes. See how we&apos;ve helped organisations transform their
-            technology and grow their business.
+          <p className="text-base sm:text-xl text-[var(--color-muted-foreground)] max-w-3xl mx-auto leading-relaxed">
+            Real projects, real outcomes. See how we&apos;ve helped
+            organisations transform their technology and grow their business.
           </p>
         </div>
       </section>
@@ -41,7 +41,7 @@ export default function CaseStudiesPage() {
               Case studies coming soon. Check back shortly!
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {posts.map((post) => (
                 <Link key={post.slug} href={`/case-studies/${post.slug}`}>
                   <Card hover className="h-full group">

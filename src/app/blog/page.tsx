@@ -22,12 +22,12 @@ export default function BlogPage() {
           <span className="inline-block text-blue-600 dark:text-blue-400 text-sm font-semibold uppercase tracking-widest mb-3">
             Insights
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-foreground)] mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--color-foreground)] mb-6">
             The Techinifity Blog
           </h1>
-          <p className="text-xl text-[var(--color-muted-foreground)] max-w-3xl mx-auto leading-relaxed">
-            Expert perspectives on cloud, AI, cybersecurity, and digital transformation — straight
-            from our consulting team.
+          <p className="text-base sm:text-xl text-[var(--color-muted-foreground)] max-w-3xl mx-auto leading-relaxed">
+            Expert perspectives on cloud, AI, cybersecurity, and digital
+            transformation — straight from our consulting team.
           </p>
         </div>
       </section>
@@ -39,7 +39,7 @@ export default function BlogPage() {
               Blog posts coming soon. Check back shortly!
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts.map((post) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`}>
                   <Card hover className="h-full group">

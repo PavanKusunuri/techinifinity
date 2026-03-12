@@ -144,12 +144,12 @@ export default function AboutPage() {
           <span className="inline-block text-blue-600 dark:text-blue-400 text-sm font-semibold uppercase tracking-widest mb-3">
             Our Story
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-foreground)] mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--color-foreground)] mb-6">
             We Help Businesses Thrive
             <br />
             in the Digital Age
           </h1>
-          <p className="text-xl text-[var(--color-muted-foreground)] max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-xl text-[var(--color-muted-foreground)] max-w-3xl mx-auto leading-relaxed">
             Founded in 2010, Techinifity has grown from a boutique consultancy
             to a trusted technology partner for over 50 enterprises across 12
             countries. Our mission is simple: make excellent technology
@@ -161,7 +161,7 @@ export default function AboutPage() {
       {/* Mission & Vision */}
       <section className="py-20 bg-[var(--color-background)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 gap-8">
             <Card className="overflow-hidden">
               <div className="h-2 bg-blue-600" />
               <CardContent className="pt-6">

@@ -30,18 +30,18 @@ export function CTA() {
               pitch — just honest advice tailored to your business challenges.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
+              <Link href="/contact" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="bg-white text-blue-600 hover:bg-blue-50 gap-2"
+                  className="bg-white text-blue-600 hover:bg-blue-50 gap-2 w-full sm:w-auto"
                 >
                   Book Free Consultation <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>
-              <Link href="/services">
+              <Link href="/services" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="border-2 border-white text-white bg-transparent hover:bg-white/10"
+                  className="border-2 border-white text-white bg-transparent hover:bg-white/10 w-full sm:w-auto"
                 >
                   Explore Services
                 </Button>
