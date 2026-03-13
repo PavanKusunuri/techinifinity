@@ -29,12 +29,20 @@ export const metadata: Metadata = {
     title: "Techinifity — IT Consultancy & Technology Solutions",
     description:
       "Transform your business with expert IT consulting, cloud solutions, cybersecurity, DevOps, and AI services.",
-    images: [{ url: "/og/default.png", width: 1200, height: 630, alt: "Techinifity — IT Consultancy & Technology Solutions" }],
+    images: [
+      {
+        url: "/og/default.png",
+        width: 1200,
+        height: 630,
+        alt: "Techinifity — IT Consultancy & Technology Solutions",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Techinifity — IT Consultancy & Technology Solutions",
-    description: "Transform your business with expert IT consulting, cloud, cybersecurity, DevOps, and AI services.",
+    description:
+      "Transform your business with expert IT consulting, cloud, cybersecurity, DevOps, and AI services.",
     images: ["/og/default.png"],
   },
 };

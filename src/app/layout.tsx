@@ -48,14 +48,22 @@ export const metadata: Metadata = {
     title: "Techinifity — IT Consultancy & Technology Solutions",
     description:
       "Expert IT consulting, cloud solutions, cybersecurity, and AI services that transform businesses.",
-    images: [{ url: "/og/default.png", width: 1200, height: 630, alt: "Techinifity — IT Consultancy & Technology Solutions" }],
+    images: [
+      {
+        url: "/og/default.png",
+        width: 1200,
+        height: 630,
+        alt: "Techinifity — IT Consultancy & Technology Solutions",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@techinifity",
     creator: "@techinifity",
     title: "Techinifity — IT Consultancy",
-    description: "Expert IT consulting and technology solutions for modern businesses.",
+    description:
+      "Expert IT consulting and technology solutions for modern businesses.",
     images: ["/og/default.png"],
   },
   robots: {

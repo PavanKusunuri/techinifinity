@@ -517,7 +517,14 @@ export async function generateMetadata({
       url,
       title: `${service.title} | Techinifity`,
       description: service.tagline,
-      images: [{ url: "/og/default.png", width: 1200, height: 630, alt: service.title }],
+      images: [
+        {
+          url: "/og/default.png",
+          width: 1200,
+          height: 630,
+          alt: service.title,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
