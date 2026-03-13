@@ -18,17 +18,24 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
   useEffect(() => {
     if (!inView) return;
     const duration = 2000;
-    const step = Math.ceil(target / (duration / 16));
-    const timer = setInterval(() => {
-      setCount((c) => {
-        if (c + step >= target) {
-          clearInterval(timer);
-          return target;
-        }
-        return c + step;
-      });
-    }, 16);
-    return () => clearInterval(timer);
+    const startTime = performance.now();
+    let rafId: number;
+
+    const animate = (now: number) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease-out quad
+      const eased = 1 - (1 - progress) * (1 - progress);
+      setCount(Math.floor(eased * target));
+      if (progress < 1) {
+        rafId = requestAnimationFrame(animate);
+      } else {
+        setCount(target);
+      }
+    };
+
+    rafId = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(rafId);
   }, [inView, target]);
 
   return (

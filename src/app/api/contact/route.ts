@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
+import { Resend } from "resend";
 
 const schema = z.object({
   name: z.string().min(2),
@@ -9,22 +10,49 @@ const schema = z.object({
   message: z.string().min(20),
 });
 
+// Basic in-memory rate limiter: max 5 requests per IP per 10 minutes
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT = 5;
+const WINDOW_MS = 10 * 60 * 1000;
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitMap.get(ip);
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + WINDOW_MS });
+    return false;
+  }
+  if (entry.count >= RATE_LIMIT) return true;
+  entry.count++;
+  return false;
+}
+
+const resend = process.env.RESEND_API_KEY
+  ? new Resend(process.env.RESEND_API_KEY)
+  : null;
+
 export async function POST(req: NextRequest) {
+  // Rate limiting
+  const ip =
+    req.headers.get("x-forwarded-for")?.split(",")[0].trim() ??
+    req.headers.get("x-real-ip") ??
+    "unknown";
+  if (isRateLimited(ip)) {
+    return NextResponse.json(
+      { error: "Too many requests. Please try again later." },
+      { status: 429 }
+    );
+  }
+
   try {
     const body = await req.json();
     const data = schema.parse(body);
 
-    const apiKey = process.env.RESEND_API_KEY;
-
-    if (!apiKey) {
+    if (!resend) {
       // Allow form submission in dev without a real key — just log
       console.log("Contact form submission (no RESEND_API_KEY):", data);
       return NextResponse.json({ success: true });
     }
-
-    // Send via Resend
-    const { Resend } = await import("resend");
-    const resend = new Resend(apiKey);
 
     await resend.emails.send({
       from: "Techinifity Contact <no-reply@techinifity.com>",

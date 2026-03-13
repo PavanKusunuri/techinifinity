@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { unstable_cache } from "next/cache";
 import { readingTime } from "./utils";
 
 const contentDir = path.join(process.cwd(), "content");
@@ -27,7 +28,7 @@ function getDir(type: "blog" | "case-studies") {
   return path.join(contentDir, type);
 }
 
-export function getAllPosts(type: "blog" | "case-studies"): PostMeta[] {
+function _getAllPosts(type: "blog" | "case-studies"): PostMeta[] {
   const dir = getDir(type);
   if (!fs.existsSync(dir)) return [];
   const files = fs.readdirSync(dir).filter((f) => f.endsWith(".mdx"));
@@ -45,7 +46,7 @@ export function getAllPosts(type: "blog" | "case-studies"): PostMeta[] {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
-export function getPostBySlug(
+function _getPostBySlug(
   type: "blog" | "case-studies",
   slug: string
 ): Post | null {
@@ -60,3 +61,16 @@ export function getPostBySlug(
     readingTime: readingTime(content),
   };
 }
+
+export const getAllPosts = unstable_cache(
+  async (type: "blog" | "case-studies") => _getAllPosts(type),
+  ["getAllPosts"],
+  { revalidate: 3600, tags: ["mdx"] }
+);
+
+export const getPostBySlug = unstable_cache(
+  async (type: "blog" | "case-studies", slug: string) =>
+    _getPostBySlug(type, slug),
+  ["getPostBySlug"],
+  { revalidate: 3600, tags: ["mdx"] }
+);

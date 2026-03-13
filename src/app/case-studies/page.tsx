@@ -47,8 +47,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function CaseStudiesPage() {
-  const posts = getAllPosts("case-studies");
+export default async function CaseStudiesPage() {
+  const posts = await getAllPosts("case-studies");
 
   return (
     <>

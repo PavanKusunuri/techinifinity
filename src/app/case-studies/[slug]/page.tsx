@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/Badge";
 import { ArrowLeft, Calendar, Clock, Building2 } from "lucide-react";
 
 export async function generateStaticParams() {
-  const posts = getAllPosts("case-studies");
+  const posts = await getAllPosts("case-studies");
   return posts.map((p) => ({ slug: p.slug }));
 }
 
@@ -18,7 +18,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPostBySlug("case-studies", slug);
+  const post = await getPostBySlug("case-studies", slug);
   if (!post) return {};
   const url = `https://techinifity.com/case-studies/${slug}`;
   const image = post.coverImage || "/og/default.png";
@@ -58,7 +58,7 @@ export default async function CaseStudyDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getPostBySlug("case-studies", slug);
+  const post = await getPostBySlug("case-studies", slug);
   if (!post) notFound();
 
   return (

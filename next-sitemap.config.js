@@ -11,7 +11,6 @@ module.exports = {
       { userAgent: "*", allow: "/" },
       { userAgent: "*", disallow: "/api/" },
     ],
-    additionalSitemaps: ["https://techinifity.com/sitemap.xml"],
   },
   transform: async (config, path) => {
     // Priority overrides per route

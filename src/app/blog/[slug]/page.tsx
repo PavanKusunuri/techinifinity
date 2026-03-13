@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/Badge";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 
 export async function generateStaticParams() {
-  const posts = getAllPosts("blog");
+  const posts = await getAllPosts("blog");
   return posts.map((p) => ({ slug: p.slug }));
 }
 
@@ -18,7 +18,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPostBySlug("blog", slug);
+  const post = await getPostBySlug("blog", slug);
   if (!post) return {};
   const url = `https://techinifity.com/blog/${slug}`;
   const image = post.coverImage || "/og/default.png";
@@ -58,7 +58,7 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getPostBySlug("blog", slug);
+  const post = await getPostBySlug("blog", slug);
   if (!post) notFound();
 
   return (
