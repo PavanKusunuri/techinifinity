@@ -48,7 +48,7 @@ function _getAllPosts(type: "blog" | "case-studies"): PostMeta[] {
 
 function _getPostBySlug(
   type: "blog" | "case-studies",
-  slug: string
+  slug: string,
 ): Post | null {
   const filePath = path.join(getDir(type), `${slug}.mdx`);
   if (!fs.existsSync(filePath)) return null;
@@ -65,12 +65,12 @@ function _getPostBySlug(
 export const getAllPosts = unstable_cache(
   async (type: "blog" | "case-studies") => _getAllPosts(type),
   ["getAllPosts"],
-  { revalidate: 3600, tags: ["mdx"] }
+  { revalidate: 3600, tags: ["mdx"] },
 );
 
 export const getPostBySlug = unstable_cache(
   async (type: "blog" | "case-studies", slug: string) =>
     _getPostBySlug(type, slug),
   ["getPostBySlug"],
-  { revalidate: 3600, tags: ["mdx"] }
+  { revalidate: 3600, tags: ["mdx"] },
 );
