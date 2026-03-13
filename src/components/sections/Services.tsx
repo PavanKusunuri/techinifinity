@@ -25,8 +25,8 @@ const services = [
     description:
       "Seamless cloud migration, architecture design, and multi-cloud management for AWS, Azure, and GCP.",
     slug: "cloud-solutions",
-    color: "text-sky-500",
-    bg: "bg-sky-50 dark:bg-sky-950",
+    color: "text-blue-500",
+    bg: "bg-blue-50 dark:bg-blue-950",
   },
   {
     icon: Shield,
@@ -61,8 +61,8 @@ const services = [
     description:
       "Custom ML models, NLP solutions, predictive analytics, and AI integration into existing systems.",
     slug: "ai-ml",
-    color: "text-orange-500",
-    bg: "bg-orange-50 dark:bg-orange-950",
+    color: "text-purple-500",
+    bg: "bg-purple-50 dark:bg-purple-950",
   },
   {
     icon: Headphones,
@@ -79,8 +79,8 @@ const services = [
     description:
       "Cross-platform iOS and Android apps built with Flutter and React Native — performant, beautiful, and production-ready.",
     slug: "mobile-applications",
-    color: "text-pink-500",
-    bg: "bg-pink-50 dark:bg-pink-950",
+    color: "text-purple-500",
+    bg: "bg-purple-50 dark:bg-purple-950",
   },
   {
     icon: Globe,
@@ -88,8 +88,8 @@ const services = [
     description:
       "Scalable full-stack web applications using React, Next.js, Node.js, and modern cloud infrastructure tailored to your business logic.",
     slug: "web-applications",
-    color: "text-teal-500",
-    bg: "bg-teal-50 dark:bg-teal-950",
+    color: "text-green-500",
+    bg: "bg-green-50 dark:bg-green-950",
   },
   {
     icon: Layout,
@@ -97,8 +97,8 @@ const services = [
     description:
       "Fast, SEO-optimised, responsive websites — from marketing landing pages to multi-page corporate sites that convert visitors into clients.",
     slug: "websites",
-    color: "text-indigo-500",
-    bg: "bg-indigo-50 dark:bg-indigo-950",
+    color: "text-blue-500",
+    bg: "bg-blue-50 dark:bg-blue-950",
   },
   {
     icon: Share2,
@@ -106,8 +106,8 @@ const services = [
     description:
       "SharePoint Online portals, intranet solutions, Power Apps, and Power Automate workflows that supercharge Microsoft 365 collaboration.",
     slug: "sharepoint-power-platform",
-    color: "text-cyan-500",
-    bg: "bg-cyan-50 dark:bg-cyan-950",
+    color: "text-green-500",
+    bg: "bg-green-50 dark:bg-green-950",
   },
 ];
 

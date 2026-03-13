@@ -25,7 +25,7 @@
   --color-background: #0f172a;
   --color-foreground: #f8fafc;
   --color-primary: #3b82f6;
-  --color-muted: #1e293b;
+  --color-muted: #1a2942;
   --color-muted-foreground: #94a3b8;
   --color-border: #334155;
   --color-card: #1e293b;
@@ -48,4 +48,5 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
