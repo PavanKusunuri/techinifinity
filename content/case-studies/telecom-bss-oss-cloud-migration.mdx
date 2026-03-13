@@ -1,0 +1,48 @@
+---
+title: "TelecomOne BSS/OSS Cloud Migration with Zero Billing Downtime"
+date: "2025-12-12"
+excerpt: "TelecomOne migrated critical BSS/OSS workloads to cloud-native infrastructure without billing disruption, reducing incident volume by 47% and cutting release times by 65%."
+client: "TelecomOne"
+industry: "Telecom"
+category: "Cloud Migration"
+tags: ["Telecom", "BSS/OSS", "Cloud", "Reliability"]
+author: "Techinifity Team"
+coverImage: "/og/default.png"
+---
+
+## Challenge
+
+TelecomOne’s billing and service orchestration stacks were tightly coupled to aging infrastructure, creating release bottlenecks and operational risk.
+
+## Constraints
+
+- Strict uptime requirements for charging and mediation
+- Regulatory data retention and audit requirements
+- Complex integrations with legacy network systems
+
+## Migration Strategy
+
+### Phase 1: Readiness & Risk Modeling
+Created workload dependency maps and established blue/green deployment runbooks for critical components.
+
+### Phase 2: Parallel Runtime
+Ran legacy and cloud environments in controlled parallel mode with deterministic reconciliation before traffic cutover.
+
+### Phase 3: Progressive Cutover
+Shifted traffic by customer segment and region with real-time rollback controls and SRE war-room oversight.
+
+## Measurable Impact
+
+| Metric | Before | After |
+|--------|--------|-------|
+| Billing Platform Incidents (quarterly) | 34 | 18 |
+| Average Release Lead Time | 20 days | 7 days |
+| Sev-1 Recovery Time | 95 mins | 28 mins |
+| Infrastructure Cost | Baseline | -29% |
+
+## Technology Stack
+
+- Kubernetes on AWS
+- Kafka and event mediation services
+- PostgreSQL and managed data services
+- Prometheus, Grafana, and OpenTelemetry

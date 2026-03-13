@@ -1,0 +1,48 @@
+---
+title: "RetailOps Omnichannel Inventory Modernization Across 1,200 Stores"
+date: "2026-02-18"
+excerpt: "A national retail chain unified in-store and online inventory with a cloud-native event platform, improving stock accuracy from 76% to 97% and reducing stock-outs by 31%."
+client: "RetailOps Group"
+industry: "Retail"
+category: "Digital Transformation"
+tags: ["Retail", "Omnichannel", "Inventory", "Event-Driven"]
+author: "Techinifity Team"
+coverImage: "/og/default.png"
+---
+
+## The Challenge
+
+RetailOps operated separate systems for point-of-sale, warehouse management, and eCommerce. Inventory mismatches led to frequent order cancellations and frustrated customers.
+
+Key issues:
+- Inconsistent stock visibility across channels
+- Nightly batch sync delays causing stale data
+- High manual reconciliation effort for store teams
+- Lost revenue from avoidable out-of-stock events
+
+## Our Approach
+
+### Discovery & Domain Mapping (Weeks 1-3)
+Mapped inventory-related business events and identified critical integration points across POS, ERP, and online storefronts.
+
+### Event Platform Implementation (Weeks 4-9)
+Built an event-driven integration layer with idempotent processing, schema validation, and replay capability for resilience.
+
+### Store Rollout & Controls (Weeks 10-14)
+Deployed phased rollout by region, introduced real-time monitoring dashboards, and trained operations teams.
+
+## Results
+
+| Metric | Before | After |
+|--------|--------|-------|
+| Inventory Accuracy | 76% | 97% |
+| Stock-Out Incidents | Baseline | -31% |
+| Order Cancellations (inventory mismatch) | 9.8% | 2.1% |
+| Reconciliation Effort | 18 hrs/store/week | 6 hrs/store/week |
+
+## Technology Stack
+
+- AWS (EKS, MSK, Lambda, RDS)
+- Event-driven architecture with Kafka
+- Node.js and TypeScript microservices
+- Datadog observability dashboards
