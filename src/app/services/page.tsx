@@ -21,6 +21,43 @@ export const metadata: Metadata = {
   title: "Services",
   description:
     "Explore Techinifity's full range of IT services: cloud solutions, cybersecurity, DevOps, data analytics, AI/ML, managed IT support, mobile apps, web applications, and websites.",
+  keywords: [
+    "IT services",
+    "cloud migration services",
+    "cybersecurity consulting",
+    "DevOps automation",
+    "data analytics services",
+    "AI ML development",
+    "managed IT support",
+    "mobile app development",
+    "web application development",
+    "enterprise IT solutions",
+  ],
+  alternates: {
+    canonical: "https://techinifity.com/services",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://techinifity.com/services",
+    title: "IT Services | Techinifity",
+    description:
+      "Cloud, cybersecurity, DevOps, AI/ML, data analytics, managed IT, mobile & web development — comprehensive technology services.",
+    images: [
+      {
+        url: "/og/default.png",
+        width: 1200,
+        height: 630,
+        alt: "Techinifity Services",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IT Services | Techinifity",
+    description:
+      "Cloud, cybersecurity, DevOps, AI/ML, managed IT, mobile & web — comprehensive technology services.",
+    images: ["/og/default.png"],
+  },
 };
 
 const services = [

@@ -10,6 +10,40 @@ export const metadata: Metadata = {
   title: "Blog",
   description:
     "Insights, guides, and thought leadership from the Techinifity team on cloud, cybersecurity, DevOps, AI, and enterprise IT.",
+  keywords: [
+    "IT blog",
+    "cloud computing insights",
+    "cybersecurity guides",
+    "DevOps best practices",
+    "AI technology articles",
+    "enterprise IT thought leadership",
+    "technology trends 2026",
+  ],
+  alternates: {
+    canonical: "https://techinifity.com/blog",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://techinifity.com/blog",
+    title: "Blog | Techinifity",
+    description:
+      "Expert insights on cloud, cybersecurity, DevOps, AI, and digital transformation from the Techinifity consulting team.",
+    images: [
+      {
+        url: "/og/default.png",
+        width: 1200,
+        height: 630,
+        alt: "Techinifity Blog",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Techinifity",
+    description:
+      "Expert insights on cloud, cybersecurity, DevOps, and AI from the Techinifity team.",
+    images: ["/og/default.png"],
+  },
 };
 
 export default function BlogPage() {

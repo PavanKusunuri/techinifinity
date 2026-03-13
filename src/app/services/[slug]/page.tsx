@@ -501,9 +501,30 @@ export async function generateMetadata({
   const { slug } = await params;
   const service = servicesData[slug];
   if (!service) return {};
+  const url = `https://techinifity.com/services/${slug}`;
   return {
     title: service.title,
     description: service.tagline,
+    keywords: [
+      service.title,
+      ...service.technologies.slice(0, 6),
+      "IT consulting",
+      "Techinifity",
+    ],
+    alternates: { canonical: url },
+    openGraph: {
+      type: "website",
+      url,
+      title: `${service.title} | Techinifity`,
+      description: service.tagline,
+      images: [{ url: "/og/default.png", width: 1200, height: 630, alt: service.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${service.title} | Techinifity`,
+      description: service.tagline,
+      images: ["/og/default.png"],
+    },
   };
 }
 

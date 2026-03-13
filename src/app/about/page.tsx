@@ -9,6 +9,40 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "Learn about Techinifity — our mission, values, and the expert team driving digital transformation for businesses worldwide.",
+  keywords: [
+    "about Techinifity",
+    "IT consultancy team",
+    "technology experts",
+    "cloud architects",
+    "DevOps engineers",
+    "digital transformation team",
+    "IT leadership",
+  ],
+  alternates: {
+    canonical: "https://techinifity.com/about",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://techinifity.com/about",
+    title: "About Us | Techinifity",
+    description:
+      "Meet the expert team behind Techinifity — experienced consultants driving cloud, cybersecurity, DevOps, and AI transformation.",
+    images: [
+      {
+        url: "/og/default.png",
+        width: 1200,
+        height: 630,
+        alt: "Techinifity Team",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | Techinifity",
+    description:
+      "Meet the expert team behind Techinifity — experienced consultants driving technology transformation.",
+    images: ["/og/default.png"],
+  },
 };
 
 const team = [

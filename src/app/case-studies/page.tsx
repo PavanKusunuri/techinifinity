@@ -12,6 +12,39 @@ export const metadata: Metadata = {
   title: "Case Studies",
   description:
     "Explore how Techinifity has helped enterprises solve complex technology challenges and achieve measurable business outcomes.",
+  keywords: [
+    "IT case studies",
+    "cloud migration case study",
+    "cybersecurity success stories",
+    "digital transformation results",
+    "enterprise IT projects",
+    "technology consulting outcomes",
+  ],
+  alternates: {
+    canonical: "https://techinifity.com/case-studies",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://techinifity.com/case-studies",
+    title: "Case Studies | Techinifity",
+    description:
+      "Real-world results: see how Techinifity has helped enterprises modernise infrastructure, cut costs, and accelerate growth.",
+    images: [
+      {
+        url: "/og/default.png",
+        width: 1200,
+        height: 630,
+        alt: "Techinifity Case Studies",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Studies | Techinifity",
+    description:
+      "Real-world results: how Techinifity helps enterprises modernise, cut costs, and grow.",
+    images: ["/og/default.png"],
+  },
 };
 
 export default function CaseStudiesPage() {

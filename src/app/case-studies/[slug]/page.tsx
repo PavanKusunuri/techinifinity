@@ -20,9 +20,35 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = getPostBySlug("case-studies", slug);
   if (!post) return {};
+  const url = `https://techinifity.com/case-studies/${slug}`;
+  const image = post.coverImage || "/og/default.png";
   return {
     title: post.title,
     description: post.excerpt,
+    keywords: [
+      ...(post.tags ?? []),
+      post.industry ?? "",
+      "case study",
+      "IT consulting results",
+      "Techinifity",
+    ].filter(Boolean),
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      url,
+      title: post.title,
+      description: post.excerpt,
+      publishedTime: post.date,
+      authors: [post.author || "Techinifity"],
+      tags: post.tags,
+      images: [{ url: image, width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [image],
+    },
   };
 }
 
@@ -37,6 +63,35 @@ export default async function CaseStudyDetailPage({
 
   return (
     <article className="pt-32 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: post.title,
+            description: post.excerpt,
+            image: post.coverImage || "https://techinifity.com/og/default.png",
+            datePublished: post.date,
+            author: {
+              "@type": "Organization",
+              name: post.author || "Techinifity",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Techinifity",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://techinifity.com/og/default.png",
+              },
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://techinifity.com/case-studies/${post.slug}`,
+            },
+          }),
+        }}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link
           href="/case-studies"

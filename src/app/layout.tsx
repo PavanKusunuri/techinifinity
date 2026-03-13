@@ -17,15 +17,29 @@ export const metadata: Metadata = {
     "Techinifity delivers expert IT consulting, cloud solutions, cybersecurity, DevOps, and AI services that transform businesses and drive growth.",
   keywords: [
     "IT consultancy",
+    "IT consulting services",
     "cloud solutions",
-    "cybersecurity",
+    "cloud migration",
+    "cybersecurity services",
     "DevOps",
+    "CI/CD automation",
     "AI consulting",
+    "machine learning solutions",
     "managed IT support",
     "digital transformation",
+    "enterprise technology",
+    "data analytics",
+    "web application development",
+    "mobile app development",
+    "software consultancy",
   ],
   authors: [{ name: "Techinifity" }],
   creator: "Techinifity",
+  publisher: "Techinifity",
+  category: "Technology",
+  alternates: {
+    canonical: "https://techinifity.com",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -34,15 +48,27 @@ export const metadata: Metadata = {
     title: "Techinifity — IT Consultancy & Technology Solutions",
     description:
       "Expert IT consulting, cloud solutions, cybersecurity, and AI services that transform businesses.",
-    images: [{ url: "/og/default.png", width: 1200, height: 630, alt: "Techinifity" }],
+    images: [{ url: "/og/default.png", width: 1200, height: 630, alt: "Techinifity — IT Consultancy & Technology Solutions" }],
   },
   twitter: {
     card: "summary_large_image",
+    site: "@techinifity",
+    creator: "@techinifity",
     title: "Techinifity — IT Consultancy",
     description: "Expert IT consulting and technology solutions for modern businesses.",
     images: ["/og/default.png"],
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -58,6 +84,30 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
         </ThemeProvider>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Techinifity",
+              url: "https://techinifity.com",
+              logo: "https://techinifity.com/og/default.png",
+              description:
+                "Techinifity delivers expert IT consulting, cloud solutions, cybersecurity, DevOps, and AI services.",
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer service",
+                email: "hello@techinifity.com",
+                availableLanguage: "English",
+              },
+              sameAs: [
+                "https://www.linkedin.com/company/techinifity",
+                "https://twitter.com/techinifity",
+              ],
+            }),
+          }}
+        />
       </body>
     </html>
   );
