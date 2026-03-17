@@ -47,15 +47,28 @@ export const metadata: Metadata = {
 
 const team = [
   {
-    name: "Sampara",
+    name: "Venkata S",
     role: "Senior Architect",
-    bio: "18 years of experience building mission-critical systems across cloud, web, and infrastructure. Renowned for delivering reliability under pressure.",
+    bio: "20 years of experience building mission-critical systems across cloud, web, and infrastructure. Renowned for delivering reliability under pressure.",
     avatar: "SA",
-    skills: ["Python", "Node.js", "JavaScript", "React", "AWS", "Azure"],
-    highlight: true,
+    skills: [
+      "Solution Architecture",
+      "Software Architecture",
+      "Cloud Architecture",
+      "Microservices",
+      "System Design",
+      "DevOps & CI/CD",
+      "AWS/Azure",
+      "Kubernetes",
+      "Security & Compliance",
+      "Scalability & Performance",
+      "Disaster Recovery",
+      "Technical Leadership",
+    ],
+    highlight: false,
   },
   {
-    name: "Pavan Kusunuri",
+    name: "Pavan K",
     role: "Senior Software Engineer",
     bio: "6+ years building enterprise and SaaS platforms across healthcare and aviation. Architected scalable REST APIs, modular React UIs, and the GlobalCalqulate multi-country financial calculator platform — with a strong focus on performance, microservices, and production reliability.",
     avatar: "PK",
@@ -74,7 +87,7 @@ const team = [
     ],
   },
   {
-    name: "Koushik",
+    name: "K Koushik",
     role: "Full Stack Engineer",
     bio: "Versatile full-stack engineer across the entire web stack — from pixel-perfect React and Next.js frontends to scalable Node/Express APIs and cloud deployments on AWS. Equally comfortable designing in Figma and analysing data in Power BI.",
     avatar: "KO",
@@ -96,7 +109,7 @@ const team = [
     ],
   },
   {
-    name: "Aslam Farooq",
+    name: "Aslam F",
     role: "SharePoint & Power Platform Engineer",
     bio: "Specialist in Microsoft 365 ecosystem — from SharePoint Online administration and OOTB solutions to building Canvas and Model-driven Power Apps with automated workflows. Bridges cloud, database, and front-end layers to deliver seamless enterprise collaboration platforms.",
     avatar: "AF",
@@ -112,7 +125,7 @@ const team = [
     ],
   },
   {
-    name: "Guru Mohan",
+    name: "G Mohan",
     role: "Mobile Solutions Lead",
     bio: "Cross-platform mobile specialist with deep expertise in Flutter, Firebase, and cloud-native app architecture. Delivers high-performance Android & iOS apps with a focus on UX excellence, stability, and Agile delivery.",
     avatar: "GM",
