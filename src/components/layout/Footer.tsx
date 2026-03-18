@@ -1,5 +1,127 @@
 import Link from "next/link";
-import { Zap, Linkedin, Twitter, Github, Mail, Phone, MapPin } from "lucide-react";
+import { Sparkles, Linkedin, Twitter, Github, Mail, Phone, MapPin } from "lucide-react";
+
+const footerLinks = {
+  Services: [
+    { href: "/services/sharepoint-power-platform", label: "SharePoint & Power Platform" },
+    { href: "/services/mobile-applications", label: "Mobile Applications" },
+    { href: "/services/web-applications", label: "Web Applications" },
+    { href: "/services/websites", label: "Websites" },
+    { href: "/services/cloud-solutions", label: "Cloud Solutions" },
+    { href: "/services/cybersecurity", label: "Cybersecurity" },
+    { href: "/services/devops", label: "DevOps & CI/CD" },
+    { href: "/services/data-analytics", label: "Data & Analytics" },
+    { href: "/services/ai-ml", label: "AI & Machine Learning" },
+    { href: "/services/it-support", label: "Managed IT Support" },
+  ],
+  Company: [
+    { href: "/about", label: "About Us" },
+    { href: "/case-studies", label: "Case Studies" },
+    { href: "/blog", label: "Blog" },
+    { href: "/contact", label: "Contact" },
+  ],
+};
+
+export function Footer() {
+  return (
+    <footer className="relative bg-[#030810] text-slate-400">
+      {/* Top gradient border */}
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-indigo-500/60 to-transparent" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* Brand */}
+          <div className="lg:col-span-1">
+            <Link href="/" className="flex items-center gap-2 font-bold text-xl text-white mb-4">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-400 flex items-center justify-center">
+                <Sparkles className="w-4 h-4 text-white" />
+              </div>
+              <span className="font-[family-name:var(--font-space-grotesk)]">
+                Techini<span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">fity</span>
+              </span>
+            </Link>
+            <p className="text-slate-500 text-sm leading-relaxed mb-6">
+              Transforming businesses through innovative IT consulting, cloud solutions, and
+              cutting-edge technology strategies.
+            </p>
+            <div className="flex gap-3">
+              {[
+                { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+                { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+                { icon: Github, href: "https://github.com", label: "GitHub" },
+              ].map(({ icon: Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center text-slate-400 hover:text-white hover:border-indigo-500/50 hover:bg-indigo-500/10 transition-all duration-200"
+                  aria-label={label}
+                >
+                  <Icon className="w-4 h-4" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Links */}
+          {Object.entries(footerLinks).map(([group, links]) => (
+            <div key={group}>
+              <h3 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">{group}</h3>
+              <ul className="space-y-2.5">
+                {links.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-slate-500 hover:text-cyan-400 text-sm transition-colors duration-200"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">Contact</h3>
+            <ul className="space-y-4">
+              <li className="flex items-center gap-3 text-slate-500 text-sm">
+                <div className="w-7 h-7 rounded-md bg-indigo-500/10 flex items-center justify-center shrink-0">
+                  <Mail className="w-3.5 h-3.5 text-indigo-400" />
+                </div>
+                hello@techinifity.com
+              </li>
+              <li className="flex items-center gap-3 text-slate-500 text-sm">
+                <div className="w-7 h-7 rounded-md bg-cyan-500/10 flex items-center justify-center shrink-0">
+                  <Phone className="w-3.5 h-3.5 text-cyan-400" />
+                </div>
+                +1 (555) 123-4567
+              </li>
+              <li className="flex items-start gap-3 text-slate-500 text-sm">
+                <div className="w-7 h-7 rounded-md bg-indigo-500/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <MapPin className="w-3.5 h-3.5 text-indigo-400" />
+                </div>
+                <span>123 Tech Avenue, Suite 400<br />San Francisco, CA 94105</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-white/5 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-slate-600 text-sm">
+            © {new Date().getFullYear()} Techinifity. All rights reserved.
+          </p>
+          <div className="flex gap-6 text-sm text-slate-600">
+            <Link href="/privacy" className="hover:text-slate-400 transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-slate-400 transition-colors">Terms of Service</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
 
 const footerLinks = {
   Services: [

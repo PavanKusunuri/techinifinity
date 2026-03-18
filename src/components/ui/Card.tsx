@@ -3,15 +3,17 @@ import { HTMLAttributes } from "react";
 
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
   hover?: boolean;
+  variant?: "default" | "glass";
 }
 
-export function Card({ className, hover = false, children, ...props }: CardProps) {
+export function Card({ className, hover = false, variant = "default", children, ...props }: CardProps) {
   return (
     <div
       className={cn(
-        "bg-[var(--color-card)] rounded-xl border border-[var(--color-border)] shadow-sm",
-        hover &&
-          "transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer",
+        "rounded-2xl border transition-all duration-300",
+        variant === "default" && "bg-[var(--color-card)] border-[var(--color-border)]",
+        variant === "glass" && "bg-white/3 backdrop-blur-sm border-white/8",
+        hover && "hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1 cursor-pointer hover:border-indigo-500/30",
         className
       )}
       {...props}

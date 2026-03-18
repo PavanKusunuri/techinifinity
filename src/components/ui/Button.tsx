@@ -12,21 +12,21 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         className={cn(
-          "inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none",
+          "inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 disabled:opacity-50 disabled:pointer-events-none select-none",
           {
-            "bg-blue-600 text-white hover:bg-blue-700 shadow-sm hover:shadow-md":
+            "bg-gradient-to-r from-indigo-500 to-cyan-500 text-white shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 hover:scale-[1.02] active:scale-[0.98]":
               variant === "primary",
-            "border-2 border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950":
+            "border border-white/20 text-white bg-white/5 hover:bg-white/10 hover:border-white/30 backdrop-blur-sm dark:border-white/20 dark:text-white dark:bg-white/5":
               variant === "outline",
-            "text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800":
+            "text-slate-400 hover:text-white hover:bg-white/8 dark:text-slate-400 dark:hover:text-white":
               variant === "ghost",
-            "bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 hover:bg-slate-200 dark:hover:bg-slate-700":
+            "bg-white/8 text-white border border-white/10 hover:bg-white/12 dark:bg-white/8 dark:text-white":
               variant === "secondary",
           },
           {
-            "px-3 py-1.5 text-sm": size === "sm",
-            "px-5 py-2.5 text-base": size === "md",
-            "px-7 py-3.5 text-lg": size === "lg",
+            "px-4 py-2 text-sm": size === "sm",
+            "px-6 py-3 text-base": size === "md",
+            "px-8 py-4 text-lg": size === "lg",
           },
           className
         )}

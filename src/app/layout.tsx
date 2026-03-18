@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import dynamic from "next/dynamic";
 import "./globals.css";
 
 const inter = Inter({
@@ -10,6 +11,17 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
 });
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
+
+const GlobalParticleField = dynamic(
+  () => import("@/components/three/GlobalParticleField"),
+  { ssr: false }
+);
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -99,8 +111,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          <GlobalParticleField />
           <Navbar />
           <main>{children}</main>
           <Footer />
