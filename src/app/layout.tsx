@@ -3,7 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import dynamic from "next/dynamic";
+import ParticleFieldClient from "@/components/three/ParticleFieldClient";
 import "./globals.css";
 
 const inter = Inter({
@@ -17,11 +17,6 @@ const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   display: "swap",
 });
-
-const GlobalParticleField = dynamic(
-  () => import("@/components/three/GlobalParticleField"),
-  { ssr: false }
-);
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -113,7 +108,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-          <GlobalParticleField />
+          <ParticleFieldClient />
           <Navbar />
           <main>{children}</main>
           <Footer />
